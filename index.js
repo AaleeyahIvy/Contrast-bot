@@ -1,7 +1,7 @@
 const { Client, Collection } = require("discord.js");
 // We also load the rest of the things we need in this file:
 const { readdirSync } = require("fs");
-const { intents, partials, permLevels } = require("./config.js");
+const { permLevels } = require("./config.js");
 const logger = require("./modules/logger.js");
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
