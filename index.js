@@ -6,7 +6,7 @@ const logger = require("./modules/logger.js");
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
 // or `bot.something`, this is what we're referring to. Your client.
-const client = new Client({ intents, partials });
+const client = new Client({ intents:["Guilds", "GuildMessages", "DirectMessages"], partials: ["Channel"] });
 
 // Aliases, commands and slash commands are put in collections where they can be
 // read from, catalogued, listed, etc.
@@ -76,7 +76,7 @@ const init = async () => {
   client.on("threadCreate", (thread) => thread.join());
 
   // Here we login the client.
-  client.login();
+  client.login(process.env.DISCORD_TOKEN);
 
 // End top-level async/await function.
 };

@@ -1,4 +1,4 @@
-const {GatewayIntentBits } = require("discord.js");
+//const { IntentsBitField } = require("discord.js");
 /* config */
 const config = {
   // Bot Admins, level 9 by default. Array of user ID strings.
@@ -13,9 +13,9 @@ const config = {
   * For join messages to work you need Guild Members, which is privileged and requires extra setup.
   * For more info about intents see the README.
   */
-  intents: [ GatewayIntentBits.FLAGS.GUILDS, GatewayIntentBits.FLAGS.GUILD_MESSAGES, GatewayIntentBits.FLAGS.DIRECT_MESSAGES ],
+ // intents: [ IntentsBitField.Flags.GUILDS, IntentsBitField.Flags.GUILD_MESSAGES, IntentsBitField.Flags.DIRECT_MESSAGES ],
   // Partials your bot may need should go here, CHANNEL is required for DM's
-  partials: ["CHANNEL"],
+  //partials: ["CHANNEL"],
 
   /*
   * Default per-server settings. These settings are entered in a database on first load, 
