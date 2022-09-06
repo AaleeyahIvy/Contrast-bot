@@ -47,7 +47,7 @@ const init = async () => {
     });
   }
 
-  // Now we load any **slash** commands you may have in the ./slash directory.
+  /* Now we load any **slash** commands you may have in the ./slash directory.
   const slashFiles = readdirSync("./slash").filter(file => file.endsWith(".js"));
   for (const file of slashFiles) {
     const command = require(`./slash/${file}`);
@@ -56,7 +56,7 @@ const init = async () => {
     
     // Now set the name of the command with it's properties.
     client.container.slashcmds.set(command.commandData.name, command);
-  }
+  }*/
 
   // Then we load events, which will include our message and ready event.
   const eventFiles = readdirSync("./events/").filter(file => file.endsWith(".js"));
