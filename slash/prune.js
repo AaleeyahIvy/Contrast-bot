@@ -19,3 +19,7 @@ module.exports = {
 		return interaction.reply({ content: `Successfully pruned \`${amount}\` messages.`, ephemeral: true });
 	},
 };
+exports.conf = {
+    permLevel: "User",
+    guildOnly: false,
+  };

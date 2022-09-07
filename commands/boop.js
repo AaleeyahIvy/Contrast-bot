@@ -12,5 +12,5 @@ exports.conf = {
     name: "boop",
     category: "Fun",
     description: "Boops a user",
-    usage: "<C boop@user"
+    usage: "> boop@user"
   };
