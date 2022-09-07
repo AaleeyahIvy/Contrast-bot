@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, GatewayIntentBits, Partials } = require("discord.js");
 // We also load the rest of the things we need in this file:
 const { readdirSync } = require("fs");
 const { permLevels } = require("./config.js");
@@ -7,7 +7,7 @@ const logger = require("./modules/logger.js");
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
 // or `bot.something`, this is what we're referring to. Your client.
-const client = new Client({ intents:["Guilds", "GuildMessages", "DirectMessages"], partials: ["Channel"] });
+const client = new Client({ intents:[GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers,], partials: [Partials.Channel] });
 
 // Aliases, commands and slash commands are put in collections where they can be
 // read from, catalogued, listed, etc.

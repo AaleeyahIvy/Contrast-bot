@@ -1,7 +1,6 @@
-exports.run = (channel, message, args)=>{
-    channel.send(`Booping ${message.mentions.members.first()} on the nose!`)
+exports.run = (client, message, args)=>{
+    message.reply(`Booping ${message.mentions.members.first()} on the nose!`)
 }
-exports.name = "boop";
 exports.conf = {
     enabled: true,
     guildOnly: false,
