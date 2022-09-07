@@ -41,7 +41,7 @@ const init = async () => {
   const commands = readdirSync("./commands/").filter(file => file.endsWith(".js"));
   for (const file of commands) {
     const props = require(`./commands/${file}`);
-    logger.log(`Loading Command: ${props.help.name}. 👌`, "log");
+    logger.log(`Loading Command: ${props.help.name}.`, "log");
     client.container.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
       client.container.aliases.set(alias, props.help.name);
@@ -63,7 +63,7 @@ const init = async () => {
   const eventFiles = readdirSync("./events/").filter(file => file.endsWith(".js"));
   for (const file of eventFiles) {
     const eventName = file.split(".")[0];
-    logger.log(`Loading Event: ${eventName}. 👌`, "log");
+    logger.log(`Loading Event: ${eventName}.`, "log");
     const event = require(`./events/${file}`);
     // Bind the client to any event, before the existing arguments
     // provided by the discord.js event. 
