@@ -19,16 +19,3 @@ module.exports = {
 		return interaction.reply({ content: `Successfully pruned \`${amount}\` messages.`, ephemeral: true });
 	},
 };
-exports.commandData = {
-    name: "prune",
-    description: "Prune up to 10 messages",
-    options: [],
-    defaultPermission: true,
-  };
-  
-  // Set guildOnly to true if you want it to be available on guilds only.
-  // Otherwise false is global.
-  exports.conf = {
-    permLevel: "User",
-    guildOnly: false
-  };
