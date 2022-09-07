@@ -56,7 +56,7 @@ const init = async () => {
     logger.log(`Loading Slash command: ${commandName}.`, "log");
     
     // Now set the name of the command with it's properties.
-    client.container.slashcmds.set(command.commandData.name, command);
+    client.container.slashcmds.set(command.commandData, command);
   }
 
   // Then we load events, which will include our message and ready event.
