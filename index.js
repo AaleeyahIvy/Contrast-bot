@@ -1,5 +1,6 @@
 require("dotenv").config();
 const { Client, Collection, GatewayIntentBits, Partials } = require("discord.js");
+const { REST } = require('@discordjs/rest');
 // We also load the rest of the things we need in this file:
 const { readdirSync } = require("fs");
 const { permLevels } = require("./config.js");
@@ -30,6 +31,7 @@ client.container = {
   slashcmds,
   levelCache
 };
+const rest = new REST({ version: '10' }).setToken(token);
 
 // We're doing real fancy node 8 async/await stuff here, and to do that
 // we need to wrap stuff in an anonymous function. It's annoying but it works.
