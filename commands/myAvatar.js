@@ -1,5 +1,11 @@
+const { EmbedBuilder } = require('discord.js');
 exports.run = (client, message, args)=>{
-    message.reply(`Booping ${message.mentions.members.first()} on the nose!`)
+  const user = message.mentions.users.first() || message.author;
+  const avatarEmbed = new EmbedBuilder
+      .setColor(0x333333)
+      .setAuthor(user.username)
+      .setImage(user.avatarURL);
+      channel.send({ embeds: [avatarEmbed] });
 }
 exports.conf = {
     enabled: true,
