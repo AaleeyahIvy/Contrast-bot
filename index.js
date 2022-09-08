@@ -11,7 +11,7 @@ const logger = require("./modules/logger.js");
 const client = new Client({ intents:[GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers,], partials: [Partials.Channel] });
 
 const clientId = '1016718682992418847';
-const guildId = '591686553038749710';
+//const guildId = '591686553038749710';
 // Aliases, commands and slash commands are put in collections where they can be
 // read from, catalogued, listed, etc.
 const commands = new Collection();
@@ -70,7 +70,7 @@ const init = async () => {
       console.log(`Started refreshing ${slashFiles.length} application (/) commands.`);
   
       const data = await rest.put(
-        Routes.applicationGuildCommands(clientId, guildId),
+        Routes.applicationCommands(clientId),
         { body: slashCommands },
       );
   
@@ -96,7 +96,7 @@ const init = async () => {
   // This event will fire when a thread is created, if you want to expand
   // the logic, throw this in it's own event file like the rest.
   client.on("threadCreate", (thread) => thread.join());
-
+  
   // Here we login the client.
   client.login(process.env.DISCORD_TOKEN);
 
