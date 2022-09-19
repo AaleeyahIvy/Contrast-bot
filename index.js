@@ -18,7 +18,6 @@ const commands = new Collection();
 const aliases = new Collection();
 const slashcmds = new Collection();
 
-client.commands = new Collection();
 // Generate a cache of client permissions for pretty perm names in commands.
 const levelCache = {};
 for (let i = 0; i < permLevels.length; i++) {
