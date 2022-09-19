@@ -34,6 +34,9 @@ client.container = {
   levelCache
 };
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
+	.then(() => console.log('Successfully registered application commands.'))
+	.catch(console.error);
 
 // We're doing real fancy node 8 async/await stuff here, and to do that
 // we need to wrap stuff in an anonymous function. It's annoying but it works.
