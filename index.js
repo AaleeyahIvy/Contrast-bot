@@ -11,7 +11,7 @@ const logger = require("./modules/logger.js");
 const client = new Client({ intents:[GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers,], partials: [Partials.Channel] });
 
 const clientId = '1016718682992418847';
-//const guildId = '591686553038749710';
+const guildId = '591686553038749710';
 // Aliases, commands and slash commands are put in collections where they can be
 // read from, catalogued, listed, etc.
 const commands = new Collection();
